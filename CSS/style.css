@@ -1,0 +1,648 @@
+/* Estilos generales */
+*{
+    margin: 0;
+    max-width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    }
+   
+#encabezado{
+    height: 1000px;
+    width: 100%;
+    overflow: hidden;
+    
+}
+/*slideshow*/
+
+.fondosHero{
+    height: 1000px;
+    width: 100%;
+    background-size: cover;
+    position: absolute;
+}
+
+#fondoHero1{
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),  url("../Media/Hero.jpg");
+    z-index: 5;
+    
+}
+#fondoHero2{
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),  url("../Media/Hero2.jpg");
+    z-index: 4;
+    
+}
+#fondoHero3{
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),  url("../Media/Hero3.jpg");
+    z-index: 3;
+    
+}
+#fondoHero4{
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),  url("../Media/Hero4.jpg");
+    z-index: 2;
+    
+}
+#fondoHero5{
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),  url("../Media/Hero5.jpg");
+    z-index: 1;
+    
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.mainSlide{
+    animation-name: mainSlideAnim;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.nextSlide{
+    animation-name: nextSlideAnim;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.hiddenSlide{
+    display: none;
+}
+
+@keyframes mainSlideAnim{
+    0%{margin-left: 0%;}
+    100%{margin-left: -100%;}
+}
+
+@keyframes nextSlideAnim{
+    0%{margin-left: 100%;}
+    100%{margin-left: 0%;}
+}
+
+/*nav*/
+
+nav{
+    width: 100%;
+    height: 50px;
+    position:fixed;
+    z-index: 7;
+    background-color: rgba(0,0,0,0.5);
+    top: 0;
+    transition-property: top;
+    transition-duration: 1s;
+
+}
+
+#logoPrincipal{
+    width: 40px;
+    height: 40px;
+    margin-top: 5px;
+    margin-left: 60px;
+    float: left;
+}
+
+#menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-left: 40%;
+    padding-right: 5%;
+    font-weight: bold;  
+    font-size: 1.5rem;  
+    
+}
+.elementoMenu > a:hover{
+    color: orange;
+}
+
+a{
+    color: white;  
+    font-family: 'Raleway', sans-serif;
+    transition-property: color;
+    transition-duration: 0.5s; 
+}
+
+#submenu{
+    width:auto;
+    height: 150px;
+    list-style: none;
+    position: absolute;
+    z-index: 7;
+    margin-top: 05px;
+    display: none;
+
+}
+
+.elementoSubmenu{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    
+}
+.elementoSubmenu >a{
+    color: white;
+    font-family: Raleway;
+    font-size: 1.5rem;
+     
+}
+.elementoSubmenu >a:hover{
+    color: orange;
+}
+
+/*Desplegar submenu*/
+
+.elementoMenu:hover #submenu{
+    display: block;
+}
+
+#tituloEncabezado{
+    font-family: 'Italiana', serif;
+    font-size:6.5rem;
+    margin-left: 33.3%;
+    margin-right: 33.3%;
+    text-align: center;
+    position: relative;
+    top: 120px;
+    margin-top: 70px;
+    animation-name: fadein;
+    animation-duration: 3s;
+    z-index: 5;
+}
+
+#subtituloEncabezado{
+    font-family: 'Italiana', serif;
+    font-size: 1.5rem;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 80px;
+    text-align: center;
+    position: relative;
+    top: 90px;
+    text-align:center;
+    font-stretch:expanded;
+    z-index: 5;
+    
+}
+
+@keyframes fadein{
+    0% {opacity: 0;top: 0px;}
+    50% {opacity: 0;top: 0px;}  
+    65% {opacity: 1;top: 150px;} 
+    80% {opacity: 1;top: 100px;}
+    100% {opacity: 1;top: 120px;}
+}
+
+/* Aqui acaba el header */
+
+
+#tostador{
+
+    width: 100%;
+    height: 950px;
+    background-color: rgb(219, 132, 92);
+    overflow: hidden;
+    
+    
+}
+
+.tituloSeccion{
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 55px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 64px;
+}
+
+#contenedorSobrenosotros{
+    width: 1200px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 35px;
+    overflow: hidden; 
+    font-family: 'Italiana', serif;
+    
+}
+
+ .colTostador{
+    width: 50%;
+    height: 550px;
+    float: left;
+} 
+.colTostador >p {
+    font-size: 18.5px;
+    padding-left: 65px;
+    padding-right: 5px;
+    font-weight:bold; 
+    
+}
+
+#videoBrasil{
+ width: 535px; 
+ height: 300px;
+
+}
+#fotoMolino{
+width: 535px;
+ background-color: lightgreen;   
+ height: 295px;
+ margin-top: 20px;
+
+}
+
+
+
+
+#carta{
+    width: 100%;
+    height: 1200px;
+    background-color: rgb(35, 23, 10);
+    overflow: hidden;
+    
+    
+}
+.titulosBlanco{
+    color: white;
+    
+}
+.tituloSeccion{
+    font-family: 'Raleway', serif; 
+    font-size: 64px;  
+}
+
+.pestaniaActiva{
+    color:orange;
+    text-decoration: underline;
+}
+
+#contenedorEtiquetasPestanias{
+    width: 1250px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    margin-top: 50px;
+}
+.etiquetaPestania{
+    font-size: 2rem;
+    color: white;
+    width: 33.3%;
+    float: left;
+    text-align: center;
+    font-family: 'Italiana', serif;
+    cursor: pointer;
+
+}
+
+.etiquetaPestania:hover{
+    color: orange;
+}
+
+.contenedorPestania{
+    width: 1275px;
+    height: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 35px;
+    overflow: hidden;
+    margin-bottom: 250px;
+}
+
+
+
+.plato{
+    width: calc(33.3% - 75px);
+    height: calc(50% - 104px);
+    background-color: lightgreen;
+    float: left;
+    margin-left: 37.5px;
+    margin-right: 37.5px;
+    margin-top: 37.5px;
+    margin-bottom: 37.5px;
+    object-fit: cover;
+    max-width: 100%;
+    
+}
+
+.imagenPlato{
+    width: 100%;
+    height: 190px;
+    background-color: lightpink;
+    object-fit: cover;
+    max-width: 100%;
+}
+.imagenPlato img{
+    transition-property: transform; 
+    transition-duration: 0.3s;
+}
+
+.imagenPlato img:hover {
+    transform: scale(1.05);
+}
+
+
+.nombrePlato{
+    text-align:center;
+    color: white;
+    margin-top: 65px;
+    font-family: 'Raleway', serif;
+    font-size: 1.4rem;
+    
+}
+.precio{
+    text-align: center;
+    color: white;
+    font-family: 'Raleway', serif;
+
+}
+
+#galeria{
+    width: 100%;
+    height: 950px;
+    background-color: rgb(219, 132, 92);;
+    overflow: hidden;
+}
+
+#contenedorGaleria{
+    width: 1260px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+
+.imgGal{
+    width: calc(33.3% - 140px);
+    height: calc(33.3% - 20px);
+    background-color: lightsalmon;
+    border-radius: 5%;
+    float: left;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    margin-right: 70px;
+    margin-left: 70px;
+    max-width: 100%;
+    object-fit: cover;
+    
+}
+.imgGal:hover{
+    box-shadow: 0px 0px 5px 5px orange;
+    cursor: pointer;
+}
+
+/* formato al lightbox */ 
+
+#modalLightboxGaleria{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: none;
+    z-index: 5;
+    top:0px;
+}
+
+#imagenParaMostrar{
+    width: 80%;
+    height: 864px;
+    background-color: rgba(0,0,0,0.9);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 40px 10px;
+    text-align: center;
+    border-radius: 40px;
+}
+
+.imagenLightbox{
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+
+
+}
+
+
+
+.botonesLightbox{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position:absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    border-style: solid;
+    border-width: 3px;
+    border-color: rgb(255, 255, 255);
+    
+}
+
+
+.botonesLightbox:hover{
+    border-color:orange;
+    
+}
+
+.botonLightboxRight{
+    right: 100px;
+
+}
+.botonLightboxLeft{
+    left: 100px;
+}
+
+.botonesLightbox i{
+    font-size: 4rem;
+    color: white;
+}
+
+.botonesLightbox i:hover{
+    color: orange;
+}
+
+
+
+
+
+#contacto{
+    background-color: rgb(28, 24, 21);
+    width: 1920px;
+    height: 950px;
+    overflow: hidden;
+    background-image: url("../Media/FondoContacto.jpg");
+    background-size:auto;
+    
+}
+
+#contenedorContacto{
+    width: 1200px;
+    height: 535px;
+    background-color: transparent;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+
+#map{
+    float: left;
+    border-radius: 8%;
+}
+
+#formulario{
+    width: 50%;
+    height: 535px;
+    background-color: transparent;
+    float: left;
+    padding-left: 70px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-family: 'Raleway', serif;
+    color: white;
+    text-shadow: 2px 2px black;
+    
+
+}
+
+
+
+input{
+    display: block;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    width: 430px;
+    height: 35px;
+    border-radius: 0.3rem;
+    border-style: solid;
+    border-width: thin;    
+}
+
+#botonEnviar{
+    width: 80px;
+    background-color: rgb(226, 226, 226);
+    border-radius: 0;
+    font-family: 'Raleway', serif;
+    font-size: 17px;
+    text-align: center;
+    transition-property: color, background-color;
+    transition-duration: 0.5s;
+    cursor: pointer; 
+}
+
+#botonEnviar:hover{
+    background-color: orange;
+    color: white;
+}
+
+/*modales formulario*/
+
+#modalFormularioRes{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: none;
+    z-index: 5;
+    top:0px;
+}
+
+#modalRes{
+    width: 700px;
+    height: 350px;
+    background-color: rgb(249, 210, 138);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 40px 10px;
+    text-align: center;
+    border-radius: 40px;
+}
+#modalRes >h1{
+    font-size: 3rem;
+    font-family: Raleway;
+    margin-bottom:18px;
+}
+
+#modalRes >button{
+    font-family: Raleway;
+    font-size: 2rem;
+    padding: 10px 10px;
+    background-color: rgb(178, 175, 175);
+    color: rgb(255, 255, 255);
+}
+#modalRes >button:hover{
+    color: black;
+    background-color:orange;
+}
+#modalRes >p{
+    font-family: Raleway;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#modalFormularioPed{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: none;
+    z-index: 5;
+    top:0px;
+}
+#modalPed{
+    width: 700px;
+    height: 350px;
+    background-color: rgb(249, 210, 138);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 40px 10px;
+    text-align: center;
+    border-radius: 40px;
+}
+#modalPed >h1{
+    font-size: 3rem;
+    font-family: Raleway;
+    margin-bottom:18px;
+}
+#modalPed >button{
+    font-family: Raleway;
+    font-size: 2rem;
+    text-align: center;
+    padding: 10px 10px;
+    background-color: rgb(178, 175, 175);
+    color: rgb(255, 255, 255);
+}
+#modalPed >button:hover{
+    color: black;
+    background-color:orange;
+}
+#modalPed >p{
+    font-family: Raleway;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+/*footer*/
+
+#pie{
+   
+    width: 100%;
+    height: 20px;
+    background-color: grey;
+    text-align: center;
+    color: white;
+    font-size: smaller;
+    transition-property: color;
+    transition-duration: 0.5s; 
+}
+#pie > a:hover{
+    color: orange;
+}
+
